@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CV Ivan</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style/grid.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/tasks.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<script src="js/jquery-3.1.1.js"></script>
+</head>
+
+<body>
+	<nav class="navbar">
+		<ul class="navbar-list">
+			<li class="navbar-item">
+				<a href="index.html" class="navbar-link">Portada</a>
+			</li>
+			<li class="navbar-item">
+				<a href="index.html#quien-soy" class="navbar-link">Quien soy</a>
+			</li>
+			<li class="navbar-item">
+				<a href="index.html#estudios" class="navbar-link">Estudios</a>
+			</li>
+			<li class="navbar-item">
+				<a href="index.html#experiencia" class="navbar-link">Experiencia</a>
+			</li>
+			<li class="navbar-item">
+				<a href="index.html#sobre-mi" class="navbar-link">Sobre mi</a>
+			</li>
+			<li class="navbar-item">
+				<a href="contact.html" class="navbar-link">Contacto</a>
+			</li>
+			<li class="navbar-item active">
+				<a href="tasks.html" class="navbar-link">Notas</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main class="container">
+		<section class="section-content row">
+			<h2>Crea tus Notas</h2>
+
+			<div class="col-6">
+				<h3>Añadir nueva nota</h3>
+				
+				<form>
+					<label>Categoria</label>
+					<input type="text" id="box-categoria" name="name">
+					<br>
+					<br>
+					<input type="text" id="newTaskName" name="name" placeholder="Nueva tarea...">
+					<br>
+					<br>
+					<button id="sendNewTask">Enviar</button>
+				</form>
+			</div>
+
+			<div class="col-6">
+				<h4>Categorias</h4>
+				<div class="loader"></div>
+				<div class="save">
+					<ul id="tasksCategoria"></ul>
+				</div>
+				<br>
+				<br>
+				<h3>Notas pendientes</h3>
+				
+				<div class="loader"></div>
+				<div>
+					<ul id="tasksContainer"></ul>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div onclick="funcionLinkedin();" id="footer-img" class="title-img-footer"><p>Ivan rodrguez by developer</p></div>
+	</footer>
+</body>
+<script src="js/send-notification.js"></script>
+<script src="js/tasks.js"></script>
+<script src="js/categoria.js"></script>
+<script src="js/scrool.js"></script>
+</html>
