@@ -19,26 +19,17 @@ for (var i = 0; i < otroInput.length; i++){
 		}
 	});
 }
-
-/*contador palabras*/
-$(document).ready(function(){
-    $('#mensaje').keyup(function(){
-        $(this).val(limitar_palabras($(this).val(),150));
-    });
-     
-});
-function limitar_palabras(texto, limite){
-    var palabras = texto.split(/\b[\s,\.\-:;]*/,limite);
-    texto=palabras.join(" ");
-
-    return texto;
-   
+/*nuevo contador*/
+function palabra(obj,e) {
+  tecla = (document.all) ? e.keyCode : e.which;
+  if (tecla==8) return;
+  maxPalabras = 150;
+  txt = obj.value.split(' ');
+  if (txt.length>maxPalabras)
+    return false;
 }
 
-/*$('#mensaje').keyup(function(){
-     var palabras = $(this).val().split(/\b[\s,\.\-:;]*//*).lenght;
-     $('#contador').text('Has escrito en total '+ palabras +' palabras');
-});*/
+
 /*validar numero formulario*/
 $("#form-contact").submit(function () {  
     if(isNaN($("#numero").val())) {  

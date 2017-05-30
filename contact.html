@@ -93,7 +93,7 @@
 					</div>
 					<div>
 						<label for="text-area">Mensaje</label><br>
-						<textarea id="mensaje" name="mensaje" cols="30" rows="6" required></textarea>
+						<textarea onkeypress = "return palabra(this,event)" id="mensaje" name="mensaje" cols="30" rows="6" required></textarea>
 							<p><span id="contador"></span></p>
 					</div>
 					<br>
@@ -106,9 +106,9 @@
 		</section>
 	</main>
 
-	<!--<video id="video" width="600" height="400"></video>
+	<video id="video" width="600" height="400"></video>
 	<button id="snap">Snap photo</button>
-	<canvas id="canvas" width="600" height="400"></canvas>-->
+	<canvas id="canvas" width="600" height="400"></canvas>
 
 	<footer class="footer">
 		<div onclick="funcionLinkedin();" id="footer-img" class="title-img-footer"><p>Ivan rodrguez by developer</p></div>

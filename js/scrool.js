@@ -165,8 +165,8 @@ $(function() {
 
 $("#firstpane p.menu_head").click(function()
 {
-    $(this).css({backgroundImage:"url(down.png)"}).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
-    $(this).siblings().css({backgroundImage:"url(left.png)"});
+    $(this).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+    $(this).siblings();
 });
 /*fin bajar despacio*/
 /*enlace linkedin*/
